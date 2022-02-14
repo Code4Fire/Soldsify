@@ -134,3 +134,5 @@ Migrating to CreateListings (20220213010022)
   [1m[36mListing Load (0.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   [1m[36mUserlisting Create (0.2ms)[0m  [1m[32mINSERT INTO "userlistings" ("name", "image", "category", "description", "price", "listing_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alexander Wang Fleece Sweatpants"], ["image", "https://di2ponv0v5otw.cloudfront.net/posts/2019/11/14/5dcdf9e7b146cc9201a26931/m_5dcdfaaa248f7ae3e3eaad24.jpg"], ["category", "Bottom"], ["description", "Alexander Wang Red Fleece Sweatpants"], ["price", 40], ["listing_id", 5], ["user_id", 2], ["created_at", "2022-02-13 03:20:23.500229"], ["updated_at", "2022-02-13 03:20:23.500229"]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
