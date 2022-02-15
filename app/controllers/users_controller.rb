@@ -6,32 +6,28 @@ class UsersController < ApplicationController
     end
 
     def show
-        render json: @podcast, status: :ok
+        user = User.find_by(id: session[:user_id])
+        if user
+            render json:user, status: :ok
+        else
+            render json: { error: "Not authorized" }, status: :unauthorized
+        end
     end
 
     def create
-        podcast = Podcast.create!(podcast_params)
-        render json: podcast, status: :created 
-    end
-
-    def update
-        @podcast.update!(podcast_params)
-        render json: @podcast, status: :ok
+        user = User.create(user_params)
+        if user.valid?
+        session[:user_id] = user.id
+          render json: user, status: :created
+        else
+          render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
     def destroy
-        @podcast.destroy
-        head :no_content
+        @user.destroy
+        render json:{}
     end
-
-    def reviews
-        album = Album.find_by(name:params[:name])
-        if album 
-            render json: album.reviews, status: :ok
-        else 
-            render json: []
-        end
-    end 
 
 private
 

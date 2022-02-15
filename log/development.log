@@ -136,3 +136,92 @@ Migrating to CreateListings (20220213010022)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/listings" for ::1 at 2022-02-15 12:43:40 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/tiffster/Development/code/Capstone Project/Soldsify/app/controllers/listings_controller.rb:38: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/listings_controller.rb:38: syntax error, unexpected `end', expecting end-of-input
+app/controllers/listings_controller.rb:38: syntax error, unexpected `end', expecting end-of-input
+app/controllers/listings_controller.rb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/listings" for ::1 at 2022-02-15 12:44:12 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ListingsController#index as */*
+  Parameters: {"id"=>1, "username"=>"test", "date"=>"test", "comment"=>"test", "user_id"=>1, "album"=>"5dGWwsZ9iB2Xc3UKR0gif2", "listing"=>{"id"=>1}}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.2ms | Allocations: 8335)
+
+
+Started GET "/userlistings%20" for ::1 at 2022-02-15 12:44:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/userlistings%20"):
+  
+Started GET "/userlistings" for ::1 at 2022-02-15 12:44:35 -0500
+Processing by UserlistingsController#index as */*
+  Parameters: {"id"=>1, "username"=>"test", "date"=>"test", "comment"=>"test", "user_id"=>1, "album"=>"5dGWwsZ9iB2Xc3UKR0gif2", "userlisting"=>{"id"=>1, "user_id"=>1}}
+  [1m[36mUserlisting Load (0.4ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 4763)
+
+
+Started GET "/users" for ::1 at 2022-02-15 12:44:46 -0500
+Processing by UsersController#index as */*
+  Parameters: {"id"=>1, "username"=>"test", "date"=>"test", "comment"=>"test", "user_id"=>1, "album"=>"5dGWwsZ9iB2Xc3UKR0gif2", "user"=>{"id"=>1}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 4430)
+
+
+Started GET "/sold_listings" for ::1 at 2022-02-15 13:43:01 -0500
+Started GET "/user_listings" for ::1 at 2022-02-15 13:43:01 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sold_listings"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/user_listings"):
+  
+Started GET "/user_listings" for ::1 at 2022-02-15 13:43:15 -0500
+Started GET "/sold_listings" for ::1 at 2022-02-15 13:43:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user_listings"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/sold_listings"):
+  
+Started GET "/userlistings" for ::1 at 2022-02-15 13:45:34 -0500
+Processing by UserlistingsController#index as */*
+  Parameters: {"id"=>1, "username"=>"test", "date"=>"test", "comment"=>"test", "user_id"=>1, "album"=>"5dGWwsZ9iB2Xc3UKR0gif2", "userlisting"=>{"id"=>1, "user_id"=>1}}
+  [1m[36mUserlisting Load (0.6ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 1.5ms | Allocations: 7122)
+
+
+Started GET "/sold_listings" for ::1 at 2022-02-15 13:45:40 -0500
+Started GET "/userlistings" for ::1 at 2022-02-15 13:45:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sold_listings"):
+  
+Processing by UserlistingsController#index as */*
+  [1m[36mUserlisting Load (0.2ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1619)
+
+
+Started GET "/listings" for ::1 at 2022-02-15 13:45:50 -0500
+Started GET "/userlistings" for ::1 at 2022-02-15 13:45:50 -0500
+Processing by UserlistingsController#index as */*
+  [1m[36mUserlisting Load (0.2ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Processing by ListingsController#index as */*
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1866)
+
+
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 1.4ms | Allocations: 7816)
+
+
