@@ -1,6 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import styled from 'styled-components'
+
+
 
 
 // const linkStyles = {
@@ -26,6 +27,10 @@ return (
         <NavLink
         to="/mylistings" exact > My Listings
         </NavLink>
+        <NavLink
+        to="/signin" exact > Log in
+        </NavLink>
+        
 
     </>
     );

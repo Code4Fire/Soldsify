@@ -225,3 +225,153 @@ Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1866)
 Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 1.4ms | Allocations: 7816)
 
 
+Started GET "/listings" for ::1 at 2022-02-15 19:19:36 -0500
+Started GET "/userlistings" for ::1 at 2022-02-15 19:19:36 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as */*
+Processing by UserlistingsController#index as */*
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 15631)
+
+
+Completed 200 OK in 19ms (Views: 8.1ms | ActiveRecord: 0.7ms | Allocations: 20472)
+
+
+Started GET "/listings" for ::1 at 2022-02-15 19:19:39 -0500
+Started GET "/userlistings" for ::1 at 2022-02-15 19:19:39 -0500
+Processing by ListingsController#index as */*
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 3504)
+
+
+Processing by UserlistingsController#index as */*
+  [1m[36mUserlisting Load (0.1ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1395)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-15 20:08:40 -0500
+Started GET "/listings" for ::1 at 2022-02-15 20:08:40 -0500
+Processing by ListingsController#index as */*
+Processing by UserlistingsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 6.1ms | Allocations: 5245)
+
+
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.6ms | Allocations: 5967)
+
+
+Started GET "/listings" for ::1 at 2022-02-15 20:15:29 -0500
+Started GET "/userlistings" for ::1 at 2022-02-15 20:15:29 -0500
+Processing by UserlistingsController#index as */*
+Processing by ListingsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[36mUserlisting Load (0.4ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.0ms | Allocations: 3601)
+
+
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.8ms | Allocations: 6077)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-15 20:26:26 -0500
+Started GET "/listings" for ::1 at 2022-02-15 20:26:26 -0500
+Processing by UserlistingsController#index as */*
+Processing by ListingsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[36mUserlisting Load (0.6ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 1.1ms | Allocations: 3171)
+
+
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.8ms | Allocations: 5955)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-15 20:46:26 -0500
+Started GET "/listings" for ::1 at 2022-02-15 20:46:26 -0500
+Processing by ListingsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UserlistingsController#index as */*
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 1.0ms | Allocations: 5118)
+
+
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 5691)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-15 20:50:02 -0500
+Started GET "/listings" for ::1 at 2022-02-15 20:50:02 -0500
+Processing by UserlistingsController#index as */*
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Processing by ListingsController#index as */*
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 1610)
+
+
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 3711)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-15 20:56:33 -0500
+Started GET "/listings" for ::1 at 2022-02-15 20:56:33 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserlistingsController#index as */*
+Processing by ListingsController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[36mUserlisting Load (0.2ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 20222)
+
+
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 0.6ms | Allocations: 21891)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-15 20:56:44 -0500
+Started GET "/listings" for ::1 at 2022-02-15 20:56:44 -0500
+Processing by UserlistingsController#index as */*
+  [1m[36mUserlisting Load (0.5ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1417)
+
+
+Processing by ListingsController#index as */*
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 3474)
+
+

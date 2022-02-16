@@ -1,11 +1,12 @@
 import React  from "react";
-import Home from '../HomeComponents/Home'
-import Sell from '../SellComponents/SellForm'
-import MyListings from '../MyListComponents/MyListings';
-import {Route, Switch} from 'react-router-dom'
+import Home from './HomeComponents/Home';
+import Sell from './SellComponents/SellForm';
+import MyListings from './MyListComponents/MyListings';
+import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
-import {useState, useEffect} from 'react'
-import styled from 'styled-components'
+import SignInSide from './SignInSide';
+import {useState, useEffect} from 'react';
+import styled from 'styled-components';
 
 function App() {
 
@@ -76,6 +77,9 @@ return (
                 <MyListings 
                 myListings={myListings} 
                 onRemove={removeMyListing}/>
+            </Route>
+            <Route exact path= "/signin">
+                <SignInSide/>
             </Route>
         </Switch>
 </>
