@@ -375,3 +375,124 @@ Processing by ListingsController#index as */*
 Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 3474)
 
 
+Started GET "/listings" for ::1 at 2022-02-16 12:55:28 -0500
+Started GET "/userlistings" for ::1 at 2022-02-16 12:55:28 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as */*
+Processing by UserlistingsController#index as */*
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mUserlisting Load (0.2ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 17838)
+
+
+Completed 200 OK in 18ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 20634)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-18 16:36:54 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserlistingsController#index as */*
+  Parameters: {"id"=>1, "username"=>"test", "date"=>"test", "comment"=>"test", "user_id"=>1, "album"=>"5dGWwsZ9iB2Xc3UKR0gif2", "userlisting"=>{"id"=>1, "user_id"=>1}}
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.6ms | Allocations: 7127)
+
+
+Started GET "/listings" for ::1 at 2022-02-18 16:39:33 -0500
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 1.3ms | Allocations: 7555)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-18 16:39:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/listings" for ::1 at 2022-02-18 19:04:06 -0500
+Started GET "/userlistings" for ::1 at 2022-02-18 19:04:06 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as */*
+Processing by UserlistingsController#index as */*
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 0.7ms | Allocations: 17842)
+
+
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 0.7ms | Allocations: 20635)
+
+
+Started GET "/listings" for ::1 at 2022-02-22 16:57:38 -0500
+Started GET "/userlistings" for ::1 at 2022-02-22 16:57:38 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as */*
+Processing by UserlistingsController#index as */*
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mUserlisting Load (0.3ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 17836)
+
+
+Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 0.7ms | Allocations: 20626)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-22 17:01:51 -0500
+Started GET "/listings" for ::1 at 2022-02-22 17:01:51 -0500
+Processing by UserlistingsController#index as */*
+Processing by ListingsController#index as */*
+  [1m[36mUserlisting Load (0.9ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.9ms | Allocations: 1957)
+
+
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.6ms | Allocations: 5144)
+
+
+Started GET "/userlistings" for ::1 at 2022-02-22 17:04:35 -0500
+Started GET "/listings" for ::1 at 2022-02-22 17:04:35 -0500
+Processing by ListingsController#index as */*
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 3480)
+
+
+Processing by UserlistingsController#index as */*
+  [1m[36mUserlisting Load (0.1ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1382)
+
+
+Started GET "/listings" for ::1 at 2022-02-22 17:16:31 -0500
+Started GET "/userlistings" for ::1 at 2022-02-22 17:16:31 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as */*
+Processing by UserlistingsController#index as */*
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/controllers/listings_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+  [1m[36mUserlisting Load (0.2ms)[0m  [1m[34mSELECT "userlistings".* FROM "userlistings"[0m
+  ↳ app/controllers/userlistings_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 0.6ms | Allocations: 17833)
+
+
+Completed 200 OK in 18ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 20628)
+
+

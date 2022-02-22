@@ -1,24 +1,25 @@
-import React  from "react";
+import {useState, useEffect} from 'react';
+import {Route, Switch} from 'react-router-dom';
 import Home from './HomeComponents/Home';
 import Sell from './SellComponents/SellForm';
 import MyListings from './MyListComponents/MyListings';
-import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import SignInSide from './SignInSide';
-import {useState, useEffect} from 'react';
-import styled from 'styled-components';
+
 
 function App() {
 
-const [listings, setListings] = useState([])
-const [myListings, setMyListings] = useState ([])
-const [search, setSearch] = useState('')
+const [listings, setListings] = useState([]);
+const [myListings, setMyListings] = useState ([]);
+const [search, setSearch] = useState('');
+console.log("Hello")
 
 useEffect(()=>{
     fetch('http://localhost:3000/listings')
     .then(resp => resp.json())
     .then(listings => setListings(listings))
 },[])
+console.log(listings)
 
 useEffect(() => {
     fetch("http://localhost:3000/userlistings")
